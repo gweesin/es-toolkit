@@ -30,3 +30,19 @@ const shouldPick = (value, key) => typeof value === 'string';
 const result = pickBy(obj, shouldPick);
 // 結果は次のようになります { b: 'pick' }
 ```
+
+## デモ
+
+::: sandpack
+
+```ts index.ts
+import { pickBy } from 'es-toolkit/object';
+
+const obj = { a: 1, b: 'pick', c: 3 };
+const shouldPick = (value, key) => typeof value === 'string';
+const result = pickBy(obj, shouldPick);
+
+console.log(result);
+```
+
+:::

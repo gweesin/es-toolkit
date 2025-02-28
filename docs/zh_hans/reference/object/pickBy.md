@@ -31,3 +31,17 @@ const shouldPick = (value, key) => typeof value === 'string';
 const result = pickBy(obj, shouldPick);
 // result 将会是 { b: 'pick' }
 ```
+
+## 演示
+
+::: sandpack
+
+```ts index.ts
+import { toMerged } from 'es-toolkit';
+const target = { a: 1, b: { x: 1, y: 2 } };
+const source = { b: { y: 3, z: 4 }, c: 5 };
+const result = toMerged(target, source);
+console.log(result);
+```
+
+:::
